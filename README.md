@@ -70,4 +70,6 @@ export default defineConfig([
     },
   },
 ])
+
+// Minor doc tweak to verify repo access and PR flow.
 ```
