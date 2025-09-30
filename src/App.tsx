@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Tv, Code2, FolderOpen } from 'lucide-react';
 
 function App() {
   const [isEmbyMaximized, setIsEmbyMaximized] = useState(true);
@@ -18,33 +19,57 @@ function App() {
           </button>
         </div>
         
-        <nav className="space-y-2">
+        <nav className="flex flex-col gap-1 p-2">
           <button 
             onClick={() => setIsEmbyMaximized(!isEmbyMaximized)}
-            className={`w-full rounded-lg bg-purple-600 hover:bg-purple-700 text-white transition-colors ${
-              isSidebarCollapsed ? 'flex items-center justify-center text-xl leading-none h-10' : 'px-4 py-3 text-left'
+            className={`flex items-center rounded-lg min-h-11 transition-all duration-200
+                        text-muted-foreground hover:text-accent-foreground
+                        hover:bg-accent/50 hover:scale-[1.02]
+                        data-[active=true]:bg-accent data-[active=true]:text-accent-foreground
+                        data-[active=true]:border-l-2 data-[active=true]:border-primary ${
+              isSidebarCollapsed 
+                ? 'justify-center px-3 py-2.5' 
+                : 'gap-3 px-3 py-2.5'
             }`}
+            data-active={isEmbyMaximized}
             title="Emby"
           >
-            {isSidebarCollapsed ? '📺' : '📺 Emby'}
+            <Tv className="size-5 shrink-0" />
+            {!isSidebarCollapsed && <span className="font-medium">Emby</span>}
           </button>
           
           <button 
-            className={`w-full rounded-lg bg-white/5 hover:bg-white/10 text-white/70 transition-colors ${
-              isSidebarCollapsed ? 'flex items-center justify-center text-xl leading-none h-10' : 'px-4 py-3 text-left'
+            className={`flex items-center rounded-lg min-h-11 transition-all duration-200
+                        text-muted-foreground hover:text-accent-foreground
+                        hover:bg-accent/50 hover:scale-[1.02]
+                        data-[active=true]:bg-accent data-[active=true]:text-accent-foreground
+                        data-[active=true]:border-l-2 data-[active=true]:border-primary ${
+              isSidebarCollapsed 
+                ? 'justify-center px-3 py-2.5' 
+                : 'gap-3 px-3 py-2.5'
             }`}
+            data-active={false}
             title="CLion"
           >
-            {isSidebarCollapsed ? '💻' : '💻 CLion'}
+            <Code2 className="size-5 shrink-0" />
+            {!isSidebarCollapsed && <span className="font-medium">CLion</span>}
           </button>
           
           <button 
-            className={`w-full rounded-lg bg-white/5 hover:bg-white/10 text-white/70 transition-colors ${
-              isSidebarCollapsed ? 'flex items-center justify-center text-xl leading-none h-10' : 'px-4 py-3 text-left'
+            className={`flex items-center rounded-lg min-h-11 transition-all duration-200
+                        text-muted-foreground hover:text-accent-foreground
+                        hover:bg-accent/50 hover:scale-[1.02]
+                        data-[active=true]:bg-accent data-[active=true]:text-accent-foreground
+                        data-[active=true]:border-l-2 data-[active=true]:border-primary ${
+              isSidebarCollapsed 
+                ? 'justify-center px-3 py-2.5' 
+                : 'gap-3 px-3 py-2.5'
             }`}
+            data-active={false}
             title="Files"
           >
-            {isSidebarCollapsed ? '📁' : '📁 Files'}
+            <FolderOpen className="size-5 shrink-0" />
+            {!isSidebarCollapsed && <span className="font-medium">Files</span>}
           </button>
         </nav>
       </div>

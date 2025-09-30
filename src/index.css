@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: oklch(0.2 0.05 280);
+  --color-accent-foreground: oklch(0.98 0.02 280);
+  --color-primary: oklch(0.627 0.265 303.9);
+  --color-muted-foreground: oklch(0.55 0.046 257.417);
+}
+
 * {
   box-sizing: border-box;
 }
