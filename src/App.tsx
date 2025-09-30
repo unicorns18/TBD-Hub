@@ -22,7 +22,7 @@ function App() {
           <button 
             onClick={() => setIsEmbyMaximized(!isEmbyMaximized)}
             className={`w-full rounded-lg bg-purple-600 hover:bg-purple-700 text-white transition-colors ${
-              isSidebarCollapsed ? 'px-2 py-3 text-center text-2xl' : 'px-4 py-3 text-left'
+              isSidebarCollapsed ? 'flex items-center justify-center text-2xl leading-none h-12' : 'px-4 py-3 text-left'
             }`}
             title="Emby"
           >
@@ -31,7 +31,7 @@ function App() {
           
           <button 
             className={`w-full rounded-lg bg-white/5 hover:bg-white/10 text-white/70 transition-colors ${
-              isSidebarCollapsed ? 'px-2 py-3 text-center text-2xl' : 'px-4 py-3 text-left'
+              isSidebarCollapsed ? 'flex items-center justify-center text-2xl leading-none h-12' : 'px-4 py-3 text-left'
             }`}
             title="CLion"
           >
@@ -40,7 +40,7 @@ function App() {
           
           <button 
             className={`w-full rounded-lg bg-white/5 hover:bg-white/10 text-white/70 transition-colors ${
-              isSidebarCollapsed ? 'px-2 py-3 text-center text-2xl' : 'px-4 py-3 text-left'
+              isSidebarCollapsed ? 'flex items-center justify-center text-2xl leading-none h-12' : 'px-4 py-3 text-left'
             }`}
             title="Files"
           >
